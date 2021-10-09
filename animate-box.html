@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box-Animation</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			background-color:#000;
+
+		}
+		.shadow{
+			position:relative;
+			margin: 200px auto 0;
+			width: 400px;
+			height: 250px;
+			background:linear-gradient(0deg,#000,#262626);
+		}
+		.shadow:before,.shadow:after{
+			content: '';
+			position: absolute;
+			left: -2px;
+			top: -2px;
+			background:linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+
+			width: calc(100% + 4px);
+			height: calc(100% + 4px);
+			background-size: 400%;
+			z-index: -1;
+			animation: box 20s linear infinite;
+
+
+		}
+		.shadow:after{
+			filter: blur(70px);
+		}
+		@keyframes box{
+			0%{
+				background-position: 0 0;
+
+			}
+			50%{
+				background-position: 500% 0;
+			}
+			100%{
+				background-position: 0 0;
+			}
+
+		}
+		h1{
+			color: red;
+			text-align: center;
+			transform: translateY(100px);
+			cursor: pointer;
+
+}
+
+
+	</style>
+</head>
+<body>
+	<div class="shadow">
+		<h1>I Love Coding..</h1>
+		
+	</div>
+
+</body>
+</html>

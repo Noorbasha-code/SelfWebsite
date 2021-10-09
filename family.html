@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filter</title>
+	<link rel="icon" type="img/video" href="icon.png">
+	<style type="text/css">
+
+		*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(45deg, #9addfd,#0a1215);
+    font-family: sans-serif;
+
+}
+.filter-menu{
+    width: 85%;
+    margin: 50px auto;
+
+}
+.filter-menu h1{
+    text-align:center;
+    text-transform: uppercase;
+    color: yellow;
+    font-family: sans-serif;
+    font-size: 4rem;
+    padding: 3px 5px;
+    margin: 40px 10px;
+    margin-left: 40%;
+    background-color:transparent;
+}
+.ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.ul li{
+    list-style: none;
+    padding: 9px 25px;
+    background-color: black;
+    cursor: pointer;
+    margin: 7px 10px;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: bolder;
+    border-radius: 15px;
+/* 
+-webkit-text-stroke: 1px;
+-webkit-text-stroke-color: white; */
+    
+}
+.ul li:hover{
+    background-color: #9adc9a;
+    color: white;
+
+}
+.ul li.current{
+    background: #9adc9a;
+
+}
+.ul li.current:hover{
+    background: #9adccc;
+
+}
+.items{
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.items img{
+    width: 250px;
+    height: 220px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.items img:hover{
+    filter: brightness(0.4);
+}
+
+@media(max-width: 768px){
+    .items{
+        width: 100%;
+
+    }
+    ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+        .hero{
+                height: 100vh;
+                background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url(bg.jpeg);
+                background-position: center;
+                background-size: cover;
+                overflow-x: hidden;
+                position: relative;
+            }
+            .btn{
+            
+                padding: 10px;
+                background-color: black;
+                font-size: 15px;
+                font-weight: bold;
+                color: yellow;
+                border-radius: 10px;
+                cursor: pointer;
+
+            }
+            
+
+	</style>
+
+	
+</head>
+<body>
+    <div class="hero">
+        
+
+	<section class="filter-menu">
+	<h1>/..family...../</h1>
+        
+        <a href="personal.html">
+       <button class="btn btn-primary">
+        
+       Home</button></a>
+
+	<ul class="ul">
+		<li class="current">All Menu</li>
+		<li>Happy</li>
+		<li>Sad</li>
+		<li>coding</li>
+		<li>Laptop</li>
+	</ul>
+	<div class="items">
+
+        <img src="images/nani.png" data-filter="happy">
+		<img src="images/nani.png" data-filter="happy">
+        <img src="images/nani.png" data-filter="happy">
+        <img src="images/nani.png" data-filter="happy">
+        <img src="images/nani.png" data-filter="happy">
+        <img src="images/nani.png" data-filter="happy">
+        <img src="images/nani.png" data-filter="happy">
+        <img src="images/nani.png" data-filter="happy">
+        <img src="images/nani.png" data-filter="happy">
+        <img src="images/nani.png" data-filter="happy">
+        <img src="images/nani.png" data-filter="happy">
+        <img src="images/nani.png" data-filter="happy">
+        
+        <img src="images/img1.jpg" data-filter="sad">
+		<img src="images/img1.jpg" data-filter="sad">
+        <img src="images/img1.jpg" data-filter="sad">
+        <img src="images/img1.jpg" data-filter="sad">
+        <img src="images/img1.jpg" data-filter="sad">
+        <img src="images/img1.jpg" data-filter="sad">
+        <img src="images/img1.jpg" data-filter="sad">
+        <img src="images/img1.jpg" data-filter="sad">
+        <img src="images/img1.jpg" data-filter="sad">
+        <img src="images/img1.jpg" data-filter="sad">
+        <img src="images/img1.jpg" data-filter="sad">
+        <img src="images/img1.jpg" data-filter="sad">
+        
+
+		<img src="images/img4.jpg" data-filter="coding">
+        <img src="images/img4.jpg" data-filter="coding">
+        <img src="images/img4.jpg" data-filter="coding">
+        <img src="images/img4.jpg" data-filter="coding">
+        <img src="images/img4.jpg" data-filter="coding">
+        <img src="images/img4.jpg" data-filter="coding">
+        <img src="images/img4.jpg" data-filter="coding">
+        <img src="images/img4.jpg" data-filter="coding">
+        <img src="images/img4.jpg" data-filter="coding">
+        <img src="images/img4.jpg" data-filter="coding">
+        <img src="images/img4.jpg" data-filter="coding">
+        <img src="images/img4.jpg" data-filter="coding">
+
+        <img src="images/img3.jpg" data-filter="laptop">
+        <img src="images/img3.jpg" data-filter="laptop">
+        <img src="images/img3.jpg" data-filter="laptop">
+        <img src="images/img3.jpg" data-filter="laptop">
+        <img src="images/img3.jpg" data-filter="laptop">
+        <img src="images/img3.jpg" data-filter="laptop">
+        <img src="images/img3.jpg" data-filter="laptop">
+        <img src="images/img3.jpg" data-filter="laptop">
+        <img src="images/img3.jpg" data-filter="laptop">
+        <img src="images/img3.jpg" data-filter="laptop">
+        <img src="images/img3.jpg" data-filter="laptop">
+        <img src="images/img3.jpg" data-filter="laptop">
+
+        
+	</div>
+	</section>
+
+    </div>
+
+<script type="text/javascript">
+	
+	const liproduct=document.querySelectorAll('.ul li');
+	const img=document.querySelectorAll('.items img');
+	liproduct.forEach(li =>{
+		li.onclick= function(){
+			liproduct.forEach(li =>{
+				li.className = "";
+			})
+
+			li.className="current";
+			const value= li.textContent;
+			img.forEach(img =>{
+				img.style.display="none";
+				if(img.getAttribute('data-filter')== value.toLowerCase() || value=="All Menu"){
+					img.style.display="block"
+				}
+
+			})
+		}
+	})
+
+function myfunction(){
+    alert("Thank you For Visiting My Family");
+}
+function load(){
+    alert("Thank you for Visiting my Family");
+}
+function home() {
+    // body...
+
+}
+</script>
+
+
+
+</body>
+</html>

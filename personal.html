@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Noor-Basha</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="img/video" href="icon.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+	<link rel="stylesheet" href="bubblescript.js">
+	<script src="bubblescript.js"></script>
+ 
+</head>
+<body>
+	<!--  onclick="setTimeout(myfunction,3000);"" -->
+	<!-- clearTimeout(varname) -->
+	<div id="loader" class="center"></div>
+<div class="hero">
+	<div class="nav-bar">
+		<div class="nav-logo">
+			<a href="C:\Users\NoorBasha\OneDrive\Desktop\US-View-InterView\Personal\musicweb\music.html">
+				<img src="C:\Users\NoorBasha\OneDrive\Desktop\US-View-InterView\Personal\images\nani.png">
+
+			</a>
+			
+		</div>
+
+		<div class="nav-links" id="nav-links">
+			<i class="fa fa-close" onclick="closemenu()"></i>
+			<ul>
+				<a href="#"  class="btn1 active"><li> Home</li></a>
+				
+				<a href="about.html"  class="btn1"><li>About</li></a>
+				<a href="https://www.flowcode.com/page/basha0"  target="_parent" class="btn1"><li>Social-Media</li></a>
+
+				<a href="musicweb/music.html"  class="btn1"><li>Music</li></a>
+				<a href="family.html"  class="btn1"><li>Design</li></a>
+				
+				
+				<!-- <a href="socialmedia.html"  class="btn1"><li>Social-Media</li></a> -->
+				
+				<a href="contact.html"  class="btn1"><li>Contact</li></a>
+			</ul>
+			<img src="darkweb/moon.png" id="icon">
+			
+			<!-- <iframe src="login.html" name="log" id="logi"></iframe> -->
+			<a href="login.html">
+				<button class="btn" type="button">Login</button>
+			
+			</a>
+			<!-- <h3 style='font-size:100px;'>&#128214;</h3> -->
+		</div>		
+		<i class="fa fa-bars" onclick="showmenu()"></i>
+	</div>
+
+	<div class="banner-title">
+		<!-- class="font-effect-fire" -->
+		<h1>I Wolud like  to Design a<br> websites..</span></h1>
+		<a href="about.html">
+		<button type="button" class="btn"> <i class="fa fa-arrow-circle-right"></i>LOveLy-Noor</button></a>
+	</div>
+
+	
+	<div class="ring">
+		Loading
+		<span></span>
+	</div>
+
+	
+	<div id="loading">
+		
+	</div>
+
+	<iframe src="bubble.html" frameborder="1"></iframe>
+	
+
+	
+
+	<div class="reffer">
+		<ul>
+			<div class="time">
+			<h3 id="demo1" style="color: orange">Time: </h3>
+			</div>
+			<li><a href="https://www.w3schools.com/html/default.asp"><i class="fa fa-arrow-circle-right"></i>Html</a></li>
+			<li><a href="https://www.w3schools.com/css/default.asp"><i class="fa fa-arrow-circle-right"></i>Css</a></li>
+			<li><a href="https://www.w3schools.com/js/default.asp"><i class="fa fa-arrow-circle-right"></i>JavaScript</a></li>
+			<li><a href="https://www.w3schools.com/angular/"><i class="fa fa-arrow-circle-right"></i>Angular</a></li>
+			<li><a href="https://www.w3schools.com/react/"><i class="fa fa-arrow-circle-right"></i>React</a></li>
+			<li><a href="https://www.w3schools.com/nodejs/"><i class="fa fa-arrow-circle-right"></i>NodeJs</a></li>
+
+
+		</ul>
+	</div>
+	<div class="vertical-bar">
+
+		<!-- <div class="search-icons">
+			<i class="fa fa-th-list"  onclick="showmenu()"></i>
+			<i class="fa fa-search"></i>
+
+		</div> -->
+		<div class="social-icons" id="soci">
+			<a href="https://www.facebook.com/noor.basha.71697/"><i class="fa fa-facebook"></i></a>
+			<a href="https://www.instagram.com/love_you_nani_143/"><i class="fa fa-instagram"></i></a>
+			<a href="https://github.com/Noorbasha-code"><i class="fa fa-github"></i></a>
+			<i class="fa fa-twitter"></i>
+
+			<a href="whatspp-chip.jpeg"><i class="fa fa-whatsapp"></i></a>
+			
+			
+			
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	var show=document.getElementById('nav-links')
+	function showmenu() {
+		// body...
+		show.style.right="0";
+
+	}
+	function closemenu() {
+		// body...
+		show.style.right="-500px";
+	}
+
+function login() {
+ 	
+		var Username=document.getElementById('Username').value;
+		var password=document.getElementById('password').value;
+		if(Username=="admin"&& password=="user"){
+			alert("Your Login is Succesfully Compleated");
+			return false;
+		}
+		else{
+			alert("fail");
+	}
+
+
+}
+var header = document.getElementById("nav-links");
+var btns = header.getElementsByClassName("btn1");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+
+
+		var icon=document.getElementById('icon');
+		icon.onclick=function(){
+			document.body.classList.toggle('dark-theme');
+			if(document.body.classList.contains("dark-theme")){
+				icon.src="darkweb/sun.png";
+
+			}else{
+				icon.src="darkweb/moon.png";
+			}
+		}
+
+		document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "visible";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
+
+
+        document.getElementsByTagName(
+          "title")[0].onpageshow = function() {
+            GFGfun()
+        };
+  
+        function GFGfun() {
+            document.getElementById("soci").innerHTML =
+              "GeeksforGeeks";
+        };
+		
+		function load(){
+
+			alert("Please wait Page is Loaded");
+			
+			document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "visible";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
+		}
+
+function checkCookies() {
+  var text = "";
+  if (navigator.cookieEnabled == true) {
+    text = "Cookies are enabled.";
+  } else {
+    text = "Cookies are not enabled.";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+function myfunction(){
+	alert("Hello , Welcome to My Page");
+}
+
+
+var d= new Date();     
+
+document.getElementById('demo1').innerHTML=d;
+
+// var myvar=setInterval(myTimer, 1000);
+// function myTimer{
+	
+// 	var d=new Date();
+// 	document.getElementById("demo1").innerHTML=d.toLocalTimeString();
+// }
+// 
+
+// var myVar = setInterval(myTimer, 1000);
+
+// function myTimer() {
+//   var d = new Date();
+//   document.getElementById("demo1").innerHTML =myVar;
+// }
+
+$(window).load(function() {
+$('#loading').hide();
+});$(window).load(function() {
+$('#loading').hide();
+});
+function createBubble() {
+                const section =
+                      document.querySelector("Section");
+                const createElement =
+                      document.createElement("span");
+                var size = Math.random() * 60;
+ 
+                createElement.style.animation =
+                  "animation 6s linear infinite";
+                createElement.style.width = 180 + size + "px";
+                createElement.style.height = 180 + size + "px";
+                createElement.style.left =
+                  Math.random() * innerWidth + "px";
+                section.appendChild(createElement);
+ 
+                setTimeout(() => {
+                    createElement.remove();
+                }, 4000);
+            }
+            setInterval(createBubble, 100);
+</script>
+</body>
+</html>

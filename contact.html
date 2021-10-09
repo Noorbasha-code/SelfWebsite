@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" type="img/video" href="icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: transparent;
+  color: white;
+  padding: 16px 20px;
+  border: 2px solid white;
+  cursor: pointer;
+  opacity: 1.0;
+  position: fixed;
+  width: 200px;
+  margin-top: -300px;
+  position: absolute;
+  margin-left: 300px;
+  border-radius: 20px;
+  font-style: italic;
+  font-size: 15px;
+
+}
+.open-button:hover{
+    width: 30%;
+}
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 30%;
+  right: 25%;
+  border: 2px solid white;
+  border-radius: 30px;
+border-block-start-color: green;
+border-inline-color: orange;
+  
+  z-index: 9;
+  margin-top: 20px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  
+  background: #000;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: red;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #000;
+  border: 2px solid green;
+  outline: none;
+  font-size: 20px;
+  border-radius: 20px;
+  color: red;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: green;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 20px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.hero{
+        height: 100vh;
+        /* background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url(bg.jpeg); */
+      background-color: black;
+        background-position: center;
+        background-size: cover;
+        overflow-x: hidden;
+        position: relative;
+        width:100%;
+        background-attachment: fixed;
+        
+      }
+      h2{
+          font-family: "Audiowide",sans-serif;
+          font-size: 30px;
+          color: white;
+          padding: 20%;
+          color: red;
+        }
+        label{
+            color: orange;
+        }
+        form h1{
+            color: white;
+        }
+        @media (max-width: 900px){
+          h2{
+            top: 0;
+            color: green;
+            margin-top: -90px;
+            margin-left: -20%;
+            
+
+          }
+          .open-button{
+            margin-top: 50%;
+            margin-left: 200px;
+            margin-bottom: -100px;
+            position: absolute;
+            background-color: black;
+            font-weight: bold;
+            color: white;
+            border: 2px solid white;
+          }
+          .form-popup{
+            margin-top: 35%;
+            position: absolute;
+            transform: translateY(10%);
+          }
+          
+
+        }
+
+.info{
+  margin-left: 20%;
+}
+.media{
+  display: inline;
+  height: 50px;
+  width: 50px;
+  
+  margin-top: 40%;
+}
+.media img{
+  height: 150px;
+  width: 150px;
+  border: 3px solid green;
+  border-radius: 50%;
+  
+  
+}
+.btn1{
+            
+            padding: 10px;
+            background-color: orange;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            float: left;
+            margin-left: 100px;
+            font-style: italic;
+            margin-top: 100px;
+            
+
+        }
+
+</style>
+</head>
+<body>
+    <div class="hero">
+      
+      <a href="personal.html">
+        <button class="btn1 btn-primary">
+         
+        Home</button></a>
+      <!-- <div class="media">
+        <img src="Facebook_Nani.png" alt="" >
+        <img src="instagram.png" alt="" >
+        <img src="Noor_Linkedin.png" alt="">
+        <img src="Noor_Mail.png" alt="">
+      
+      
+      </div> -->
+      
+
+<h2>Connect-With Noor-Basha</h2>
+
+
+
+<button class="open-button" onclick="openForm()">Open Form</button>
+
+<div class="form-popup" id="myForm" >
+  <form action="/postdemo.js" class="form-container" method="POST">
+    <!-- <h1>Basha--- **</h1> -->
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+
+    
+    <label for="email"><b>Email-Id</b></label>
+    <input type="text" placeholder="Enter Mobile-No" name="email" required>
+
+    <label for="mobile"><b>Mobile-No</b></label>
+    <input type="text" placeholder="Enter Mobile-No" name="email" required>
+
+    <button type="submit" class="btn" onclick="myfunction()">Connect-Noor</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+function myfunction(){
+  document.getElementById('myForm').submit();
+  // var x=document.forms["myform"]["name"].value;
+  // if(x ==" "){
+  //   alert("Name must be filled out");
+
+  // }
+}
+
+</script>
+
+</body>
+</html>

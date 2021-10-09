@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Clock
+	</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			width: 100%;
+
+		}
+		.hero{
+				height: 100vh;
+				background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url(bg.jpeg);
+				background-position: center;
+				background-size: cover;
+				overflow-x: hidden;
+				position: relative;
+			}
+		.main-container{
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		
+		h1{
+			width: 100%;
+			color: white;
+			font-size: 4vw;
+			letter-spacing: 10px;
+			margin-top: 15%;
+			position: absolute;
+			font-weight: bold;
+			text-align: center;
+			font-family: sans-serif;
+
+		}
+		#clock{
+			width: 100%;
+			position: absolute;
+			color: white;
+			text-align: center;
+			font-family: sans-serif;
+			font-size: 3vw;
+			margin-top: 25%;
+
+
+		}
+
+		
+	</style>
+</head>
+<body onload="realtimeclock()">
+<div class="main-container">
+	<div class="hero">
+		<h1>REAL TIME CLOCK</h1>
+	    <div id="clock">xlckjzczl</div>
+		
+	</div>
+	
+</div>
+<script type="text/javascript">
+	function realtimeclock() {
+		// body...
+		var rtcolck = new Date();
+		var hours = rtcolck.getHours();
+		var minits = rtcolck.getMinutes();
+		var seconds = rtcolck.getSeconds();
+		var amPm = ( hours < 12 ) ? "AM" : "PM";
+		hours = (hours > 12) ? hours - 12 : hours; 
+
+		hours = ("0" +  hours).slice(-2);
+		minits = ("0" + minits).slice(-2);
+		seconds = ("0" + seconds).slice(-2);
+
+		document.getElementById('clock').innerHTML = hours + " : " + minits + " : " + seconds + " " +amPm;
+		var t = setTimeout(realtimeclock, 500);
+
+</script>
+
+</body>
+</html>

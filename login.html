@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOgin2</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+			
+		}
+		body{
+			background-color: #CCCCFF;
+			opacity: 1.4;
+
+		}
+		.box{
+
+			width: 300px;
+			padding: 30px;
+			position: absolute;
+			top: 50%;
+			left: 20%;
+			transform: translate(-50%,-50%);
+			background:transparent;
+			text-align: center;
+			border-top-right-radius: 50px;
+
+		}
+		.box h1{
+			color:orange;
+			text-transform:uppercase;
+			font-weight: 700;
+
+		}
+		.box input[type="text"], .box input[type="password"]
+		{
+			border: 0;
+			background-color: black;
+			display: block;
+			margin: 20px auto;
+			border: 3px solid #0367fd;
+			padding: 14px 10px;
+			width: 220px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition:o.25px; 
+
+
+		}
+		.box input[type="text"]:focus, .box input[type="password"]:focus{
+			width: 270px;
+			border-color: #ffc400ec
+		}
+		/* .box input[type="submit"]{
+			border: 0;
+			background-color: black;
+			display: block;
+			border: 3px solid #ffc400ec		;
+			padding: 14px 10px;
+			width: 220px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition:o.25px; 
+			cursor: pointer;
+			margin: 20px auto;
+
+		} */
+		.submit{
+
+			border: 0;
+			background-color: black;
+			display: block;
+			border: 3px solid #ffc400ec		;
+			padding: 14px 10px;
+			width: 220px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition:o.25px; 
+			cursor: pointer;
+			margin: 20px auto;
+			font-size: 20px;
+		}
+		.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 20px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+/* 
+
+.form .message a{
+				text-decoration: none;
+				color: blue;
+			}
+			.form .box{
+				display: none;
+
+			}
+			.message1 a{
+				color: red;
+				text-decoration: none;
+			} */
+
+
+			.hero{
+				height: 100vh;
+				background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url(bg.jpeg);
+				background-position: center;
+				background-size: cover;
+				overflow-x: scroll;
+				position: relative;
+				background-attachment: fixed;
+			}
+
+</style>
+</head>
+<body>
+
+	<div class="hero">
+	<form class="box" action="login2.html" method="POST">
+	<h1>LOgin</h1>
+
+	<input type="text" name="" placeholder="Enter your Username" id="Username">
+
+	<input type="text" name="" placeholder="Enter your password" id="password">
+	<button class="submit" type="submit" name="" value="Login" onclick="validate()">Login	</button>
+	
+	<!-- <p class="message">Not Rigisterd? <a href="#">Create</p> -->
+	<div class="alert">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<strong>Danger!</strong> Please Enter Your Username Id and PassWord
+	  </div>
+	  
+
+	</form>
+     </div>
+	 
+	<!-- <form class="box">	
+
+		<input type="text" placeholder="User name" id="username">
+		<input type="text" placeholder="Password" id="Password">
+		<input type="text" placeholder="email-Id">	
+		<button  type="button">Create</button>
+		<p class="message">Already Rigisterd? <a href="#">Login</p>
+
+	</form>
+	 -->
+
+	
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+
+	
+	
+	$('.message a').click(function () {
+
+$('form').animate({height:"toggle", opacity:"toggle"},"slow");
+
+
+}); -->
+
+
+<script type="text/javascript">
+function validate() {
+ 	
+		var Username=document.getElementById('Username').value;
+		var password=document.getElementById('password').value;
+		if(Username=="admin"&& password=="user"){
+			alert("Your Login is Succesfully Compleated");
+			return false;
+		}
+		else{
+			alert("fail");
+;		}
+
+
+}
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
